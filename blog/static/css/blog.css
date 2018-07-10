@@ -1,7 +1,9 @@
 .page-header {
     background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:10px;
+    text-align: center;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -11,7 +13,7 @@
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 h1, h2, h3, h4 {
@@ -33,14 +35,56 @@ h1, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 20pt;
+    margin-right: 15px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 5px;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Add a gray right border to all list items, except the last item (last-child) */
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
 }

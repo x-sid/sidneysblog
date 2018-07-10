@@ -2,12 +2,17 @@
 
 {% block body %}
     {% for post in posts %}
-        <div class="post">
-            <div class="date">
+        <hr>
+        <div class="container-fluid">
+        	<div class="post">
                 {{ post.published_date }}
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1><br>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" class="img-responsive"/>
+                {% endif %}
+                <p>{{ post.text|linebreaksbr }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">comments:{{ post.comments.count }}</a>
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}
